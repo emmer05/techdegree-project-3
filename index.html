@@ -12,88 +12,91 @@
       <header>
           <h1>The Code Review</h1>
       </header>
+      <div class="container">
         <form action="index.html" method="post">
-            <h2>Sign up for our Newsletter</h2>
-            <p>Get the latest news on how your code is doing right in your inbox</p>
+            <div class="intro">
+                <h2>Sign up for our Newsletter</h2>
+                <p>Get the latest news on how your code is doing right in your inbox</p>
+            </div>
+            <div class="border1">
+                <fieldset class="contact"> <!--Contact Information-->
+                    <legend>Contact Information</legend>
 
-            <div class="border1"></div>
-            <div class="border2"></div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="user_name" placeholder="Required">
 
-            <fieldset class="contact"> <!--Contact Information-->
-                <legend>Contact Information</legend>
+                    <label for="mail">Email Address</label>
+                    <input type="email" id="mail" name="user_email" placeholder="Required">
 
-                <label for="name">Name</label>
-                <input type="text" id="name" name="user_name">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="user_phone">
 
-                <label for="mail">Email Address</label>
-                <input type="email" id="mail" name="user_email">
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" name="user_address">
 
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="user_phone">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="user_city">
 
-                <label for="address">Street Address</label>
-                <input type="text" id="address" name="user_address">
+                    <label for="province">Province</label>
+                    <select id="province" name="user_province">
+                        <optgroup label="Provinces">
+                            <option value="alberta">Alberta</option>
+                            <option value="british_columbia">British Columbia</option>
+                            <option value="manitoba">Manitoba</option>
+                            <option value="new Brunswick">New Brunswick</option>
+                            <option value="newfoundland and Labrador">Newfoundland and Labrador</option>
+                            <option value="nova Scotia">Nova Scotia</option>
+                            <option value="ontario">Ontario</option>
+                            <option value="prince_edward_island">Prince Edward Island</option>
+                            <option value="quebec">Quebec</option>
+                            <option value="saskatchewan">Saskatchewan</option>
+                        </optgroup>
+                        <optgroup label="Territories">
+                            <option value="northwest_territories">Northwest Territories</option>
+                            <option value="nunavut">Nunavut</option>
+                            <option value="yukon">Yukon</option>
+                        </optgroup>
+                    </select>
+                    
+                    <label for="postal">Postal Code</label>
+                    <input type="text" id="postal" name="user_postal">
 
-                <label for="city">City</label>
-                <input type="text" id="city" name="user_city">
+                </fieldset> <!--/Contact Information-->
+            </div> <!--/border1-->
 
-                <label for="province">Province</label>
-                <select id="province" name="user_province">
-                    <optgroup label="Provinces">
-                        <option value="alberta">Alberta</option>
-                        <option value="british_columbia">British Columbia</option>
-                        <option value="manitoba">Manitoba</option>
-                        <option value="new Brunswick">New Brunswick</option>
-                        <option value="newfoundland and Labrador">Newfoundland and Labrador</option>
-                        <option value="nova Scotia">Nova Scotia</option>
-                        <option value="ontario">Ontario</option>
-                        <option value="prince_edward_island">Prince Edward Island</option>
-                        <option value="quebec">Quebec</option>
-                        <option value="saskatchewan">Saskatchewan</option>
-                    </optgroup>
-                    <optgroup label="Territories">
-                        <option value="northwest_territories">Northwest Territories</option>
-                        <option value="nunavut">Nunavut</option>
-                        <option value="yukon">Yukon</option>
-                    </optgroup>
-                </select>
-                
-                <label for="postal">Postal Code</label>
-                <input type="text" id="postal" name="user_postal">
+            <div class="border2">
+                <fieldset class="newsletter"> <!--Newsletter Information-->
+                    <legend>Newsletter</legend>
 
-            </fieldset> <!--/Contact Information-->
+                    <label class="block">Select the newsletters you would like to recieve</label>
 
-            <fieldset class="newsletter"> <!--Newsletter Information-->
-                <legend>Newsletter</legend>
+                    <input type="checkbox" id="html_news" value="interest_html" name="user_interest">
+                    <label for="html_news">HTML News</label><br>
 
-                <label>Select the newsletters you would like to recieve</label>
+                    <input type="checkbox" id="css_news" value="interest_html" name="user_interest">
+                    <label for="css_news">CSS News</label><br>
 
-                <input type="checkbox" id="html_news" value="interest_html" name="user_interest">
-                <label for="html_news">HTML News</label><br>
+                    <input type="checkbox" id="javascript_news" value="interest_html" name="user_interest">
+                    <label for="javascript_news">Javascript News</label><br>
 
-                <input type="checkbox" id="css_news" value="interest_html" name="user_interest">
-                <label for="css_news">CSS News</label><br>
+                    <label class="block">Newsletter Format</label>
 
-                <input type="checkbox" id="javascript_news" value="interest_html" name="user_interest">
-                <label for="javascript_news">Javascript News</label><br>
+                    <input type="radio" id="format_html" value="format_html" name="newsletter_format">
+                    <label for="format_html">HTML</label><br>
 
-                <label for="comment">Other topics you'd like to hear about</label>
-                <textarea id="comment" name="user_comment"></textarea><br>
+                    <input type="radio" id="format_plain" value="format_plain" name="newsletter_format">
+                    <label for="format_plain">Plain Text</label><br>
 
-                <label>Newsletter Format</label>
+                    <label for="comment">Other topics you'd like to hear about</label>
+                    <textarea id="comment" class="comment" name="user_comment"></textarea><br>
 
-                <input type="radio" id="format_html" value="format_html" name="newsletter_format">
-                <label for="format_html">HTML</label><br>
-
-                <input type="radio" id="format_plain" value="format_plain" name="newsletter_format">
-                <label for="format_plain">Plain Text</label><br>
-
-            </fieldset> <!--/Newsletter Information-->
-            
-            <button type="submit">Sign Up</button>
-
-            <p>&copy; Copyright The Code Review</p>
-            
+                </fieldset> <!--/Newsletter Information-->
+                <button type="submit">Sign Up</button>
+            </div> <!--/border1-->
         </form>
+    </div> <!--/Container-->
   </body>
+  <footer>
+    <p class="copyright">&copy; Copyright The Code Review</p>
+  </footer>
 </html>
