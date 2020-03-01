@@ -73,7 +73,6 @@ legend {
 }
 
 .contact label {
-    display: block;
     margin: 1.5em 0 .75em;
 }
 
@@ -143,6 +142,11 @@ footer {
     padding: 0 2%;   
 }
 
+.flex-box {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* ---- Borders ---- */
 
@@ -163,3 +167,36 @@ footer {
     width: 100%;
 }
 
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+@media (min-width: 600px) {
+
+    .container {
+        max-width: 600px;
+    }
+
+    .flex-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .contact label {
+        margin-right: auto;
+        width: 25%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 75%;
+        margin: 1.5em 0 .75em;
+    }
+
+}
